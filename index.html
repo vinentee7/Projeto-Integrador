@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brotherhood Barbearia - Águas Claras, DF</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Brotherhood Barbearia</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">A Barbearia</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#agendar" class="cta-nav">Agendar Agora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Estilo e Tradição em Águas Claras</h2>
+                <p>Mais que um corte, uma experiência. Agende seu horário conosco.</p>
+                <a href="#agendar" class="cta-button">Agendar Agora</a>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <div class="container content-section">
+                <div class="sobre-texto">
+                    <h2>Sobre a Brotherhood</h2>
+                    <p>Localizada no coração de Águas Claras, a Brotherhood Barbearia não é apenas um lugar para cortar o cabelo ou fazer a barba. É um espaço de encontro, uma pausa na rotina e um lugar onde o estilo clássico encontra o moderno. Nossa equipe é apaixonada pelo que faz, garantindo um serviço de precisão em um ambiente acolhedor.</p>
+                    <p>Venha tomar um café conosco e renovar o visual.</p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="img/interior.png" alt="Interior da Brotherhood Barbearia">
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos">
+            <div class="container content-section">
+                <h2>Nossos Serviços</h2>
+                <div class="servicos-grid">
+                    <div class="servico-card" id="card-servico">
+                        <h3>Cabelo</h3>
+                        <p>Cortes clássicos ou modernos, na tesoura ou máquina. Inclui lavagem e finalização.</p>
+                        <span class="preco">R$ 40,00</span>
+                    </div>
+                    <div class="servico-card" id="card-servico">
+                        <h3>Barba</h3>
+                        <p>Barba modelada com toalha quente, navalha e os melhores produtos para a pele.</p>
+                        <span class="preco">R$ 40,00</span>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Sobrancelha</h3>
+                        <p>Design e limpeza de sobrancelha na navalha ou pinça, respeitando o formato do rosto.</p>
+                        <span class="preco">R$ 25,00</span>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Pintura</h3>
+                        <p>Coloração, descoloração (platinado) ou luzes. Consulte nossos profissionais.</p>
+                        <span class="preco">A consultar</span>
+                    </div>
+                    <div class="servico-card">
+                        <h3>Completo (Cabelo + Barba)</h3>
+                        <p>O pacote completo para sair renovado. O melhor dos dois mundos.</p>
+                        <span class="preco">R$ 70,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <div class="container content-section">
+                <h2>Galeria de Clientes</h2>
+                <p>Confira o resultado do nosso trabalho.</p>
+                <div class="galeria-grid">
+                    <div class="galeria-item"><img src="img/corte1.png" alt="Corte infantil"></div>
+                    <div class="galeria-item"><img src="img/corte2.png" alt="Barba Modelada com fade"></div>
+                    <div class="galeria-item"><img src="img/corte3.png" alt="Barba"></div>
+                    <div class="galeria-item"><img src="img/corte4.png" alt="Corte social"></div>
+                    <div class="galeria-item"><img src="img/corte5.png" alt="Cabelo e barba"></div>
+                    <div class="galeria-item"><img src="img/corte6.png" alt="Corte moecano"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="agendar">
+            <div class="container content-section">
+                <h2 id="tituloAgendamento" >Faça seu Agendamento</h2>
+                <p>Escolha o serviço, o dia e o horário. Simples e rápido.</p>
+
+                <p id="mensagemBoasVindas" class="mensagem-saudacao"></p>
+                
+                <form class="form-agendamento">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">WhatsApp</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(61) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="servico">Qual serviço você procura?</label>
+                        <select id="servico" name="servico" required>
+                            <option value="">Selecione o serviço...</option>
+                            <option value="cabelo">Cabelo (R$ 40,00)</option>
+                            <option value="barba">Barba (R$ 40,00)</option>
+                            <option value="completo">Completo - Cabelo e Barba (R$ 70,00)</option>
+                            <option value="sobrancelha">Sobrancelha (R$ 25,00)</option>
+                            <option value="pintura">Pintura (A consultar)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Escolha o dia</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Escolha o horário (Seg-Sex: 10h-20h, Sáb: 9h-18h)</label>
+                        <select id="hora" name="hora" required>
+                            <option value="">Selecione o horário...</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                        </select>
+                    </div>
+                    
+                    
+                    <button type="submit" class="cta-button" id="btnAgendar">Confirmar Agendamento</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="localizacao">
+            <div class="container content-section">
+                <h2>Onde Estamos</h2>
+                <div class="local-flex">
+                    <div class="local-info">
+                        <h3>Brotherhood Barbearia</h3>
+                        <p><strong>Endereço:</strong><br>
+                           [Colocar o endereço completo aqui],<br>
+                           Águas Claras, Brasília - DF
+                        </p>
+                        
+                        <h3>Horário de Funcionamento</h3>
+                        <p><strong>Segunda a Sexta:</strong><br>
+                           10:00 às 20:00
+                        </p>
+                        <p><strong>Sábado:</strong><br>
+                           09:00 às 18:00
+                        </p>
+                        <p><strong>Domingo:</strong><br>
+                           Fechado
+                        </p>
+                    </div>
+                    <div class="local-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50387.89264426535!2d-48.06173041933458!3d-15.839807572714083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a331df2500001%3A0x6d9a163653130e6!2s%C3%81guas%20Claras%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1678886000000" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Brotherhood Barbearia. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const botaoAgendar = document.querySelector("#btnAgendar");
+        const tituloAgendamento = document.querySelector("#tituloAgendamento");
+
+        botaoAgendar.onclick = function(event) {
+            
+            event.preventDefault(); 
+            
+            
+            tituloAgendamento.innerHTML = "Recebemos sua solicitação!";
+            tituloAgendamento.style.color = "#4CAF50"; 
+        }
+
+        const campoNome = document.querySelector("#nome");
+        const mensagemBoasVindas = document.querySelector("#mensagemBoasVindas");
+
+        campoNome.oninput = function() {
+            
+            if (campoNome.value === "") {
+                mensagemBoasVindas.innerHTML = "";
+            } else {
+                mensagemBoasVindas.innerHTML = "Olá, " + campoNome.value + "! Pronto para agendar?";
+            }
+        }
+
+        const cardServico = document.querySelector("#card-servico");
+
+        cardServico.onmouseover = function() {
+           
+            cardServico.style.border = "2px solid var(--cor-primaria)";
+            cardServico.style.transform = "scale(1.05)";
+        }
+
+        cardServico.onmouseout = function() {
+            
+            cardServico.style.border = "1px solid #333"; 
+            cardServico.style.transform = "scale(1)"; 
+        }
+    </script>
+
+</body>
+</html>

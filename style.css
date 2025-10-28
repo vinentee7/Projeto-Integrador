@@ -1,0 +1,378 @@
+/* 1. Reset Global e Variáveis de Cor */
+:root {
+    --cor-primaria: #c59d5f;  /* Dourado/Bege - um tom clássico de barbearia */
+    --cor-secundaria: #1a1a1a;/* Preto/Grafite escuro */
+    --cor-fundo: #121212;     /* Fundo principal (preto) */
+    --cor-texto: #f4f4f4;    /* Texto principal (branco-cinza) */
+    --cor-texto-sec: #aaa;  /* Texto secundário (cinza) */
+    
+    --fonte-titulo: 'Oswald', sans-serif;
+    --fonte-texto: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Para a rolagem suave dos links */
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.content-section {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-sec);
+    margin-bottom: 1rem;
+}
+
+/* 2. Cabeçalho e Navegação */
+header {
+    background-color: var(--cor-secundaria);
+    border-bottom: 2px solid var(--cor-primaria);
+    padding: 1.2rem 0;
+    position: sticky; /* Fixa o menu no topo */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cor-primaria);
+}
+
+.cta-nav {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.cta-nav:hover {
+    color: var(--cor-secundaria);
+    opacity: 0.9;
+}
+
+/* 3. Botão CTA (Call to Action) Principal */
+.cta-button {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    font-family: var(--fonte-titulo);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #e0b973; /* Um dourado mais claro no hover */
+    transform: scale(1.05);
+}
+
+/* 4. Seção Home (Hero) */
+.hero {
+    min-height: 85vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('img/barbearia.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #f4f4f4;
+    margin-bottom: 2.5rem;
+}
+
+/* 5. Seção Sobre */
+#sobre .content-section {
+    text-align: left;
+}
+#sobre .container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.sobre-texto {
+    flex: 1;
+}
+.sobre-imagem {
+    flex: 1;
+}
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 8px;
+    border: 3px solid var(--cor-primaria);
+}
+
+/* 6. Seção Serviços */
+#servicos {
+    background-color: var(--cor-secundaria);
+}
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.servico-card {
+    background-color: var(--cor-fundo);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.servico-card .preco {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-top: 1rem;
+    display: block;
+}
+
+/* 7. Seção Galeria */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.galeria-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover; 
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.galeria-item img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+/* 8. Seção Agendamento */
+#agendar {
+    background-color: var(--cor-secundaria);
+}
+.form-agendamento {
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+    background-color: var(--cor-fundo);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+.mensagem-saudacao {
+    font-size: 1.3rem; 
+    color: var(--cor-primaria); 
+    font-weight: 500; 
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: var(--cor-texto);
+    font-size: 1.1rem;
+}
+.form-agendamento .cta-button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* 9. Seção Localização */
+.local-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+.local-info {
+    flex-basis: 40%;
+}
+.local-info p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-sec);
+}
+.local-info h3 {
+    margin-top: 1.5rem;
+}
+.local-map {
+    flex-basis: 55%;
+}
+.local-map iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    border: 2px solid var(--cor-primaria);
+}
+
+/* 10. Rodapé */
+footer {
+    background-color: #000;
+    padding: 2.5rem 0;
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 3rem;
+}
+footer p {
+    color: var(--cor-texto-sec);
+    margin-bottom: 1rem;
+}
+.social-links a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* 11. Responsividade (Media Queries) */
+@media (max-width: 900px) {
+    
+    nav ul {
+        
+        flex-direction: column;
+        display: none; 
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    /* Ajustes de layout */
+    #sobre .container {
+        flex-direction: column;
+    }
+    .local-flex {
+        flex-direction: column;
+    }
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-section {
+        padding: 3rem 0;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    .servicos-grid {
+        grid-template-columns: 1fr; /* 1 coluna */
+    }
+    .galeria-grid {
+        grid-template-columns: 1fr; /* 1 coluna */
+    }
+    .form-agendamento {
+        padding: 1.5rem;
+    }
+}
